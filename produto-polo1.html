@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Coleção Polo</title>
+    <title>Polo Premium Preta</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -71,33 +71,41 @@
 
     </header>
 
-    <main>
 
-        <section class="colecao-topo">
+    <main class="produto">
+        <section class="produto-container">
+            <div class="produto-imagem">
+                <img src="./img_polo/polo1.jpg"  alt="Polo Premium Preta">
+            </div>
+            <div class="produto-info">
+                <h1>Polo Premium Preta</h1>
+                <p class="preco">R$ 129,90</p>
+                <div class="secao">
+                    <h4>Cor</h4>
+                <div class="cores">
+                    <button class="cor preto" onclick="trocarImagem('polo1.jpg')"></button>
+                    <button class="cor branco" onclick="trocarImagem('polo-branca.jpg')"></button>
+                </div>
+            </div>
+            <div class="secao">
+                <h4>Tamanho</h4>
+                <div class="tamanho">
+                    <button onclick="selecionarTamanho(this)">P</button>
+                    <button onclick="selecionarTamanho(this)">M</button>
+                    <button onclick="selecionarTamanho(this)">G</button>
+                    <button onclick="selecionarTamanho(this)">GG</button>
+                </div>
+            </div>
 
-                <h1>Coleção Polo</h1>
-
-                <p>
-                    Elegância e conforto para todas as ocasiôes.
-                </p>
-
-           
-
+            <div class="secao">
+                <h4>Quantidade</h4>
+                <input type="number" value="1" min="1">
+            </div>
+            <button class="comprar" onclick="EnviarWhatsApp()">Adicionar ao carrinho</button>
+            </div>
         </section>
-
-       <section class="produto-grid">
-        <a href="produto-polo1.html" class="produto-link">
-        <div class="produto-card">
-            <img src="./img_polo/polo1.jpg" alt="Polo">
-            <h3>Polo Premium Preta</h3>
-
-            <span>R$ 129,90</span>
-            
-        </div>
-        </a>
-       </section> 
-
     </main>
 
-</body>
-</html>
+    <script src="script.js"></script>
+    </body>
+    </html>
