@@ -362,11 +362,21 @@ nav ul li:hover ul {
 }
 
 .cor {
-    width: 28px;
-    height: 28px;
+    width: 32px;
+    height: 32px;
     border-radius: 50%;
     border: 2px solid #ccc;
     cursor: pointer;
+    transition: 0.3s;
+}
+
+.cor:hover {
+    transform: scale(1.1);
+}
+
+.cor.ativa {
+    border: 3px solid #f4ac05;
+    transform: scale(1.15);
 }
 
 .preto {
@@ -377,16 +387,43 @@ nav ul li:hover ul {
     background: white;
 }
 
+.produto-imagem img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 12px;
+
+    transition: 0.4s ease;
+}
+
+.tamanho {
+    display: flex;
+    gap: 10px;
+}
+
 .tamanho button {
-    padding: 8px 12px;
-    border: 1px solid #ccc;
-    background: none;
-    cursor: pointer;
+   width: 50px;
+   height: 45px;
+
+   border: 1px solid #ccc;
+   background: white;
+
+   border-radius: 8px;
+   cursor: pointer;
+   font-weight: bold;
+   transition: 0.3s;
+}
+
+.tamanho button:hover {
+    border-color: #111;
+    transform: translateY(-3px);
 }
 
 .tamanho button.ativo {
-    background: #111;
+    background: #f4ac05;
     color: #fff;
+    border-color: #111;
+
+    transform: scale(1.05);
 }
 
 input[type="number"] {
@@ -408,10 +445,47 @@ input[type="number"] {
     cursor: pointer;
 
     font-size: 16px;
+    font-weight: bold;
     transition: 0.3s;
+
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
 
 .comprar:hover {
     background: #f4ac05;
     color: #111;
+
+    transform: translateY(-4px);
+
+    box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+}
+
+.whatsapp-btn {
+    margin-top: 15px;
+    width: 100%;
+    padding: 14px;
+
+    background: #25d366;
+    color: white;
+
+    border: none;
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.whatsapp-btn:hover {
+    background: #1ebe5d;
+    transform: translateY(-3px);
+}
+
+.mensagem-carrinho {
+    margin-top: 15px;
+    color: #25d366;
+    font-weight: bold;
 }

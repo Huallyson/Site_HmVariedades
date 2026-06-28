@@ -83,7 +83,7 @@
                 <div class="secao">
                     <h4>Cor</h4>
                 <div class="cores">
-                    <button class="cor preto" onclick="trocarImagem('polo1.jpg')"></button>
+                    <button class="cor preto ativa" onclick="trocarImagem('polo1.jpg')"></button>
                     <button class="cor branco" onclick="trocarImagem('polo-branca.jpg')"></button>
                 </div>
             </div>
@@ -99,9 +99,15 @@
 
             <div class="secao">
                 <h4>Quantidade</h4>
-                <input type="number" value="1" min="1">
+                <input type="number" value="" min="1">
             </div>
-            <button class="comprar" onclick="EnviarWhatsApp()">Adicionar ao carrinho</button>
+            <button class="comprar" onclick="adicionarCarrinho()">
+                Adicionar ao carrinho
+            </button>
+            <button class="whatsapp-btn" onclick="EnviarWhatsApp()">
+                Finalizar no WhatsApp
+            </button>
+            <p class="mensagem-carrinho"></p>
             </div>
         </section>
     </main>
