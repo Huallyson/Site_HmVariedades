@@ -35,10 +35,16 @@ function adicionarCarrinho() {
 
     let produto = "Polo Premium Preta";
 
-    let preco = "129,90";
+    let preco = 129.90;
 
-    let quantidade =
-    document.querySelector("input[type='number']").value;
+    let quantidade = Number(
+        document.querySelector("input[type='number']").value
+    );
+
+    if (quantidade <= 0 || isNaN(quantidade)) {
+        alert("Informe uma quantidade válida.");
+        return;
+    }
 
     let item = {
         produto,
@@ -49,8 +55,10 @@ function adicionarCarrinho() {
 
     carrinho.push(item);
 
-    document.querySelector(".mensagem-carrinho")
-    .innerText = "Produto adicionado ao carrinho!";
+    atualizarCarrinho();
+
+    document.querySelector(".mensagem-carrinho").innerText =
+        "Produto adicionado ao carrinho!";
 }
 
 
@@ -75,4 +83,39 @@ function EnviarWhatsApp() {
     let url = `https://wa.me/558185377245?text=${msg}`;
 
     window.open(url, "_blank");
+}
+
+
+function atualizarCarrinho() {
+    let lista =
+    document.getElementById("lista-carrinho");
+
+    lista.innerHTML = "";
+    carrinho.forEach(function(item){
+        let produto = document.createElement("div");
+        produto.classList.add("item-carrinho");
+
+        produto.innerHTML=`
+
+<div class="item-info">
+
+<strong>${item.produto}</strong>
+
+<span>Tamanho: ${item.tamanho}</span>
+
+<span>Quantidade: ${item.quantidade}</span>
+
+<span>R$ ${item.preco}</span>
+
+</div>
+
+<button>Excluir</button>
+
+`;
+
+lista.appendChild(produto);
+
+    });
+
+   
 }
