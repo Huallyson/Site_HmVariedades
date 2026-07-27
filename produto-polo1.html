@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Polo Premium Preta</title>
 
     <link rel="stylesheet" href="style.css">
@@ -15,113 +14,171 @@
     <header>
 
         <div class="logo">
-            <img src="./img_home/logo.jpg" alt="">
+            <img src="./img_home/logo.jpg" alt="HM Variedades">
         </div>
 
         <nav>
-    <ul>
-        <li>
-            <a href="index.html">Início</a>
-        </li>
-        <li>
-            <a href="">Roupas</a>
             <ul>
+
                 <li>
-                    <a href="">Masculino</a>
+                    <a href="index.html">Início</a>
                 </li>
+
                 <li>
-                    <a href="">Feminino</a>
+                    <a href="#">Roupas</a>
+                    <ul>
+                        <li><a href="#">Masculino</a></li>
+                        <li><a href="#">Feminino</a></li>
+                        <li><a href="#">Promoções</a></li>
+                    </ul>
                 </li>
+
                 <li>
-                    <a href="">Promoções</a>
+                    <a href="#">Gravatas</a>
+                    <ul>
+                        <li><a href="#">Kits Festividades</a></li>
+                    </ul>
                 </li>
+
+                <li>
+                    <a href="#">Bíblias</a>
+                    <ul>
+                        <li><a href="#">Estudo</a></li>
+                        <li><a href="#">Mulheres</a></li>
+                        <li><a href="#">Infantil</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#">Livros</a>
+                </li>
+
+                <li>
+                    <a href="#">Contato</a>
+                </li>
+
             </ul>
-        </li>
-        <li>
-            <a href="">Gravatas</a>
-            <ul>
-                <li>
-                    <a href="">Kits Festividades </a>
-                </li>
-            </ul>
-        </li>
-        <li>
-            <a href="">Bíblias</a>
-            <ul>
-                <li>
-                    <a href="">Estudo</a>
-                </li>
-                <li>
-                    <a href="">Mulheres</a>
-                </li>
-                <li>
-                    <a href="">Infantil</a>
-                </li>
-            </ul>
-        </li>
-        <li>
-            <a href="">Livros</a>
-        </li>
-        <li>
-            <a href="">Contato</a>
-        </li>
-    </ul>
-    
-  </nav>
+        </nav>
+        
 
     </header>
 
-
     <main class="produto">
+
         <section class="produto-container">
+
             <div class="produto-imagem">
-                <img src="./img_polo/polo1.jpg"  alt="Polo Premium Preta">
+                <img src="./img_polo/polo1.jpg" alt="Polo Premium Preta">
             </div>
+
             <div class="produto-info">
+
                 <h1>Polo Premium Preta</h1>
-                <p class="preco">R$ 129,90</p>
+
+                <p class="preco">
+                    R$ 129,90
+                </p>
+
+                <!-- COR -->
+
                 <div class="secao">
+
                     <h4>Cor</h4>
-                <div class="cores">
-                    <button class="cor preto ativa" onclick="trocarImagem('polo1.jpg')"></button>
-                    <button class="cor branco" onclick="trocarImagem('polo-branca.jpg')"></button>
-                </div>
-            </div>
-            <div class="secao">
-                <h4>Tamanho</h4>
-                <div class="tamanho">
-                    <button onclick="selecionarTamanho(this)">P</button>
-                    <button onclick="selecionarTamanho(this)">M</button>
-                    <button onclick="selecionarTamanho(this)">G</button>
-                    <button onclick="selecionarTamanho(this)">GG</button>
-                </div>
-            </div>
 
-            <div class="secao">
-                <h4>Quantidade</h4>
-                <input type="number" value="" min="1">
-            </div>
-            <button class="comprar" onclick="adicionarCarrinho()">
-                Adicionar ao carrinho
-            </button>
-            <button class="whatsapp-btn" onclick="EnviarWhatsApp()">
-                Finalizar no WhatsApp
-            </button>
-            <p class="mensagem-carrinho"></p>
-            <div class="carrinho">
-                <h3>🛒 Meu Carrinho</h3>
-                <div id="lista-carrinho">
+                    <div class="cores">
+
+                        <button
+                            class="cor preto ativa"
+                            onclick="trocarImagem('polo1.jpg'); selecionarCor(this)">
+                        </button>
+
+                        <button
+                            class="cor branco"
+                            onclick="trocarImagem('polo-branca.jpg'); selecionarCor(this)">
+                        </button>
+
+                    </div>
 
                 </div>
-                <h4>
-                    Total: R$ 
-                    <span id="total">0,00</span>
-                </h4>
+
+                <!-- TAMANHO -->
+
+                <div class="secao">
+
+                    <h4>Tamanho</h4>
+
+                    <div class="tamanho">
+
+                        <button onclick="selecionarTamanho(this)">P</button>
+
+                        <button onclick="selecionarTamanho(this)">
+                            M
+                        </button>
+
+                        <button onclick="selecionarTamanho(this)">G</button>
+
+                        <button onclick="selecionarTamanho(this)">GG</button>
+
+                    </div>
+
+                </div>
+
+                <!-- QUANTIDADE -->
+
+                <div class="secao">
+
+                    <h4>Quantidade</h4>
+
+                    <input
+                        type="number"
+                        value="1"
+                        min="1">
+
+                </div>
+
+                <!-- BOTÕES -->
+
+                <button
+                    class="comprar"
+                    onclick="adicionarCarrinho()">
+
+                    Adicionar ao carrinho
+
+                </button>
+
+                <button
+                    class="whatsapp-btn"
+                    onclick="EnviarWhatsApp()">
+
+                    Finalizar no WhatsApp
+
+                </button>
+
+                <p class="mensagem-carrinho"></p>
+
+                <!-- CARRINHO -->
+
+                <div class="carrinho">
+
+                    <h3>🛒 Meu Carrinho</h3>
+
+                    <div id="lista-carrinho"></div>
+
+                    <h4>
+                        Total: R$
+                        <span id="total">0,00</span>
+                    </h4>
+
+                </div>
+
             </div>
-            </div>
+
         </section>
+
     </main>
 
     <script src="script.js"></script>
-    </body>
-    </html>
+
+</body>
+
+</html>
